@@ -1,0 +1,19 @@
+<div class="modal-header">
+	<h5 class="modal-title">Info</h5>
+	<button type="button" class="close" aria-label="Close" (click)="close()">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+
+<div class="modal-body">
+	<div class="card" [ngClass]="modal.style"  *ngFor="let modal of content">
+		<div class="card-body">
+		<p class="card-text">{{ modal.content }}</p>
+		<p class="card-text text-white text-right"><small>{{ modal.date | date: 'hh:mm:ss dd.MM.yyyy'}}</small></p>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary" (click)="close()">Zavřít</button>
+</div>
