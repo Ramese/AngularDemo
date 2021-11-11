@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-status',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatusComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public todoService: TodoService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  get count(): number {
+    return this.todoService.todos.length;
+  }
 }

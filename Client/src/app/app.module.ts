@@ -18,6 +18,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { StatusComponent } from './components/status/status.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
 	entryComponents: [
@@ -31,7 +32,8 @@ import { StatusComponent } from './components/status/status.component';
     ErrorComponent,
     LoginComponent,
     TodoComponent,
-    StatusComponent
+    StatusComponent,
+    DashboardComponent
   ],
   imports: [
 	AppRoutingModule,
